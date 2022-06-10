@@ -6,7 +6,7 @@
   </section>
   <div class="range">
     <strong>ГОСУДАРСТВЕННЫЕ</strong>
-    <input @click="log()" type="range" min="0" :max="prototype.length - 1" v-model="activeIndex">
+    <input id="range" @click="log()" type="range" min="0" :max="prototype.length - 1" v-model="activeIndex">
     <strong>ИНОАГЕНТЫ</strong>
   </div>
 </template>
@@ -43,17 +43,18 @@ export default {
   background-color: black;
   padding: 5px;
 }
+
 .left {
-  transform: scale(0.8);
+  transform: scale(.8);
 }
 .right {
-  transform: scale(0.8);
+  transform: scale(.8);
 }
 strong {
   font-family: Montserrat, sans-serif;
   font-weight: 1000;
   font-size: 10px;
-  margin: 0px 10px 0 10px;
+  margin: 0 10px 0 10px;
   color: white;
 }
 </style>

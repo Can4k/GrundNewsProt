@@ -1,7 +1,5 @@
 <template>
-  <header></header>
-<!--  <scrollbar :prototype="this.prototype"></scrollbar>-->
-  <scrollbar_v2 :prototype="this.prototype"></scrollbar_v2>
+   <scrollbar :prototype="this.prototype"></scrollbar>
 </template>
 
 <script>

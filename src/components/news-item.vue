@@ -22,7 +22,8 @@
 export default {
   name: "news-item",
   props: {
-    source: Object
+    source: Object,
+    position: Number
   }
 }
 </script>

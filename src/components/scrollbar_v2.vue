@@ -1,14 +1,12 @@
 <template>
-  <section class="range">
-  </section>
-  <news-item class="leningrad" :style="top + left" :source="prototype[0]"/>
+  <news-item v-for="s in prototype" class="leningrad" :source="s"/>
 </template>
 
 <script>
 import NewsItem from "@/components/news-item";
 import {useMouse} from '@vueuse/core'
 
-const {x, y} = useMouse();
+const {x, y} = useMouse()
 
 export default {
   name: "scrollbar_v2",
@@ -17,29 +15,14 @@ export default {
     prototype: Array
   },
   data() {
-    return {
-      x: x,
-      y: y,
-    }
   },
   computed: {
-    top() {
-      return "top: " + String(this.y) + "px;";
-    },
-    left() {
-      return "left: " + String(this.x) + "px;";
-    }
+
   }
 }
 </script>
 
 <style scoped>
 .range {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.leningrad {
-  position: absolute;
 }
 </style>
